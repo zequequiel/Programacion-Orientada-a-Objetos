@@ -8,7 +8,7 @@ le solicite. Escribe un número negativo para salir.
 #include <iostream>                   // Lee desde y escribe hacia la consola
 #include <vector>                     // Permite hacer colecciones de datos de un mismo tipo
 
-using namespace std;                  // Usa el espacio de nombres est�ndar
+using namespace std;                  // Usa el espacio de nombres estándar
 
 int main() {
   /* Definición de variables */
@@ -30,7 +30,7 @@ int main() {
       pide_otro = true;
       calificaciones.push_back(calificacion);  // Inserta el número al final del vector
     }else{
-    // Esto se ejecuta si calificacion < 0.0 
+      // Esto se ejecuta si calificacion < 0.0 
       pide_otro = false;
     }
   }
