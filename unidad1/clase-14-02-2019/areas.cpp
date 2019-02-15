@@ -10,20 +10,20 @@ USO: ejecute y proporcione los datos solicitados
 using namespace std;                      // Se usa el espacio de nombres estándar
 
 float areaCirculo(float radio) {
-  float area = 0;                         // Defino una variable para guardfar el área
+  float area = 0;                         // Defino una variable para guardar el área
   float PI = 3.1415;                      // Defino de la constante PI
   area = PI * radio * radio;              // Calculo el área
   return area;                            // Devuelve el valor área calculada
 }
 
 float areaRectangulo(float base, float altura) {
-  float area = 0;                         // Defino una variable para guardfar el área
+  float area = 0;                         // Defino una variable para guardar el área
   area = base * altura;                   // Calculo el área
   return area;                            // Devuelve el valor área calculada
 }
 
 float areaTriangulo(float base, float altura) {
-  float area = 0;                          // Defino una variable para guardfar el área
+  float area = 0;                          // Defino una variable para guardar el área
   area = base * altura / 2;                // Calculo el área
   return area;                             // Devuelve el valor área calculada
 }
