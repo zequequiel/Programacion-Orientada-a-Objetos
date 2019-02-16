@@ -39,7 +39,7 @@ int main() {                            // TODO programa en C++ se ejecuta dentr
       break;
   }
 
-  // system("pause");                      // Detiene temporalmente la ejecusión del programa, para que alcancemos a leer consola
+  system("pause");                      // Detiene temporalmente la ejecusión del programa, para que alcancemos a leer la consola
   return 0;                             // Valor de retorno, en main 0 significa NO HUBO PROBLEMA
 }
 
