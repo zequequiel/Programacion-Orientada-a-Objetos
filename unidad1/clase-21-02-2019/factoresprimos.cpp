@@ -1,3 +1,4 @@
+
 /*
 AUTOR: Ezequiel Arceo May
 PROPÓSITO: Factorizar un número entero en sus factores primos
