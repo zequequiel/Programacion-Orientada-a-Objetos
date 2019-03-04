@@ -17,6 +17,11 @@ Contacto:
 
 `ezarceo85@gmail.com`           **Personal y alternativo**
 
+Notas del Parcial 1
+===========
+[Parcial 1](./unidad1/parcial1.pdf)
+
+
 Libro de Texto
 ==============
 
