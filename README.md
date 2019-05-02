@@ -26,6 +26,11 @@ Notas del Parcial 2
 ===========
 [Parcial 2](./unidad2/parcial2.pdf)
 
+
+Notas del Parcial 3
+===========
+[Parcial 3](./unidad3/parcial3.pdf)
+
 Libro de Texto
 ==============
 
