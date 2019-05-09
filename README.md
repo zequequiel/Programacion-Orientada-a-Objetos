@@ -31,7 +31,7 @@ Notas del Parcial 3
 ===========
 [Parcial 3](./unidad3/parcial3.pdf)
 
-**CÓDIGO BASE DEL PROYECTO FINAL (no descargar, leer en)**
+**CÓDIGO BASE DEL PROYECTO FINAL (no descargar, leer en línea)**
 
 [Proyecto Final](./unidad3/psicional.cpp)
 
