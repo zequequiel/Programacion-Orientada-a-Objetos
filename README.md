@@ -35,6 +35,7 @@ Notas del Parcial 3
 
 [Proyecto Final](./unidad3/psicional.cpp)
 
+**REFERENCIAS SOBRE MATEMÁTICAS MAYAS**
 
 [The lucid and powerful Mayan mathematics for teaching](./unidad3/matematica-maya-lucida.pdf)
 
