@@ -33,7 +33,7 @@ Notas del Parcial 3
 
 **CÓDIGO BASE DEL PROYECTO FINAL (no descargar, leer en línea)**
 
-[Proyecto Final](./unidad3/psicional.cpp)
+[Proyecto Final](./unidad3/posicional.cpp)
 
 **REFERENCIAS SOBRE MATEMÁTICAS MAYAS**
 
