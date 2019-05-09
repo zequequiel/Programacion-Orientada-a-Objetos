@@ -37,7 +37,9 @@ Notas del Parcial 3
 
 
 [The lucid and powerful Mayan mathematics for teaching](./unidad3/matematica-maya-lucida.pdf)
+
 [TO LEARN MATHEMATICS: MAYAN MATHEMATICS IN BASE 10](./unidad3/matematica-maya-base-10.pdf)
+
 [MATEMÁTICA MAYA](./unidad3/aritmetica-maya.pdf)
 
 Libro de Texto
