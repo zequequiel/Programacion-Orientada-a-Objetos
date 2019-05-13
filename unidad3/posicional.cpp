@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string>
 #include<vector>
+#include<math.h>
 
 using namespace std;
 
@@ -71,10 +72,12 @@ public:
   vector<Entero> divide(Entero divisor); // retorna cociente y residuo
 };
 Entero::Entero(int valor){
+  int _signo = signo(valor); // guardamos el signo de "valor"
+  valor = _signo * valor; // tomamos el valor absoluto de "valor"
   vector<int> digitos_revertidos = revierte_digitos(valor);
   Nivel nivel(0);
   for (int i=0; i < digitos_revertidos.size(); i++){
-    nivel = Nivel(digitos_revertidos[i]);
+    nivel = Nivel(_signo * digitos_revertidos[i]); // el nivel de cada valor tiene signo
     niveles.push_back(nivel);
   }
 }
@@ -153,12 +156,6 @@ Entero Entero::multiplica(Entero factor){
   int kmax = 0;     // Niveles del resultado (antes de "normalizar")
   int valor_ij = 0; // Producto de dos niveles (i mio, j de factor)
   int dir_ij = 0;   // Dónde "acumular" un producto de dos niveles
-  /*if( imax > 1 && jmax > 1){
-    kmax = imax*jmax - 1;
-  }
-  else{
-    kmax = maximo(imax,jmax);
-  }*/
   kmax = imax + jmax - 1;
   // Inicializa el resultado
   for(int k=0; k < kmax; k++){      // con la cantidad adecuada de digitos,
@@ -175,33 +172,13 @@ Entero Entero::multiplica(Entero factor){
 }
 // DIVIDE ########################################################
 Entero Entero::copia(){
-  vector<int> digitos_resultado;
-  int valor;
-  for (int i=0; i < niveles.size(); i++){ // Ciclo sobre mis niveles
-    valor = niveles[i].get_valor(); 
-    digitos_resultado.push_back(valor); 
-  }
-  return Entero(digitos_resultado);
+  return multiplica(Entero(1));
 }
 Entero Entero::cajas(){
-  vector<int> digitos_resultado;
-  for (int i=0; i < niveles.size(); i++){ // Ciclo sobre mis niveles
-    digitos_resultado.push_back(0); 
-  }
-  return Entero(digitos_resultado);
+  return multiplica(Entero(0));
 }
 Entero Entero::hacia_arriba(int salto){
-  vector<int> digitos_resultado;
-  // Añade "salto" niveles con valor cero
-  for (int i=0; i < salto; i++){
-    digitos_resultado.push_back(0); 
-  }
-  int valor;
-  for (int i=0; i < niveles.size(); i++){ // Ciclo sobre mis niveles
-    valor = niveles[i].get_valor(); 
-    digitos_resultado.push_back(valor);
-  }
-  return Entero(digitos_resultado);
+  return multiplica(Entero(pow(10,salto)));
 }
 Nivel Entero::nivel(int indice){
   return niveles[indice];
@@ -247,6 +224,7 @@ vector<Entero> Entero::divide(Entero divisor){
 
 
 int main(){
+  cout << Entero(-20) << endl;
   Entero e1(52);
   Entero e2(73);
   Entero e3(3);
