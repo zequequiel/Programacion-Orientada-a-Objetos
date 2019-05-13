@@ -153,12 +153,13 @@ Entero Entero::multiplica(Entero factor){
   int kmax = 0;     // Niveles del resultado (antes de "normalizar")
   int valor_ij = 0; // Producto de dos niveles (i mio, j de factor)
   int dir_ij = 0;   // Dónde "acumular" un producto de dos niveles
-  if( imax > 1 && jmax > 1){
+  /*if( imax > 1 && jmax > 1){
     kmax = imax*jmax - 1;
   }
   else{
     kmax = maximo(imax,jmax);
-  }
+  }*/
+  kmax = imax + jmax - 1;
   // Inicializa el resultado
   for(int k=0; k < kmax; k++){      // con la cantidad adecuada de digitos,
     digitos_resultado.push_back(0); // con cada digito a cero
@@ -212,7 +213,7 @@ vector<Entero> Entero::divide(Entero divisor){
   vector<Entero> cociente_residuo;
   Entero residuo = copia();  // Inicializa al residuo como el divisor
   Entero cociente = cajas(); // Inicializa al cociente en cero
-  vector<int> _cociente;
+  //vector<int> _cociente;
   int residuo_size = residuo.get_niveles().size();
   int divisor_size = divisor.get_niveles().size();
   int salto = residuo_size - divisor_size;
@@ -224,9 +225,12 @@ vector<Entero> Entero::divide(Entero divisor){
     _signo = signo(residuo_cabeza);
     while(residuo_cabeza != 0){
       cout << "residuo: " << residuo << endl;
+      //cout << Entero(_signo) << endl;
       if (_signo > 0){
+        // enteros
         residuo = residuo - divisor.hacia_arriba(salto);}
       else{
+        // enteros + polinomios univariados sobre los enteros
         residuo = residuo + divisor.hacia_arriba(salto);}
       cociente.agrega_a_nivel(salto,_signo);
       residuo_cabeza = residuo.nivel(divisor_size + salto - 1).get_valor();
@@ -286,5 +290,6 @@ int main(){
   qr = e6/e7;
   qr = e8/e9;
   qr = e10/e11;
+  //Entero(276)/Entero(21);
   return 0;
 }
